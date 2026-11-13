@@ -4,7 +4,7 @@ Persistent judging worker daemon and low-level Linux sandbox engine for **Toi YÃ
 
 ## Architecture
 
-`tyyoj-judger` runs as a persistent daemon container inside Docker, managed directly by the `tyyoj-backend` Docker Engine provisioner.
+`tyyoj-judger` runs as a persistent daemon container inside Podman, managed directly by the `tyyoj-backend` Podman Engine provisioner.
 
 - **Rust Worker Daemon (`src/daemon`):**
   Continuously polls submission jobs from Redis, reports live worker telemetry heartbeats, fetches problem test case data, coordinates compilation, and delegates execution to the low-level sandbox.
